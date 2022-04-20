@@ -5,7 +5,9 @@ import LoginNavigation from "./login.navigation";
 export default function Navigation() {
   return (
     <NavigationContainer>
+
       <LoginNavigation />
+      
     </NavigationContainer>
   );
 }

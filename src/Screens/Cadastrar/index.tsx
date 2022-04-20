@@ -24,15 +24,15 @@ export default function Cadastrar({ navigation }: LoginTypes) {
       <ImageBackground
         source={require("../../assets/fundo.png")}
         style={styles.container}
-      >
+      />
         <KeyboardAvoidingView>
           <Text style={styles.title}>Cadastre-se</Text>
           <View style={styles.formRow}>
-            <Ionicons name="person" style={styles.icon} />
+            <Ionicons name="person" style={styles.icon}/>
             <TextInput style={styles.input} placeholder="Nome" />
           </View>
           <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon} />
+            <MaterialIcons name="email" style={styles.icon}/>
             <TextInput
               style={styles.input}
               placeholder="E-mail"
@@ -41,7 +41,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
             />
           </View>
           <View style={styles.formRow}>
-            <Entypo name="key" style={styles.icon} />
+            <Entypo name="key" style={styles.icon}/>
             <TextInput
               style={styles.input}
               placeholder="Senha"
@@ -52,7 +52,6 @@ export default function Cadastrar({ navigation }: LoginTypes) {
           <Button title="Salvar" type="purple" onPress={handleSignIn} />
           <Button title="Voltar" type="green" onPress={handleLogin} />
         </KeyboardAvoidingView>
-      </ImageBackground>
     </View>
   );
 }
