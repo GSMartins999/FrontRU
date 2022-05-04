@@ -16,10 +16,10 @@ export default function Chat() {
   return (
     <ImageBackground source={require("../../assets/fundo.png")}
       style={styles.container}>
-      <SafeAreaView style={styles.container}>>
-        <View>
-          <FontAwesome5 name="search" size={24} color="black" />
-          <TextInput placeholder="Pesquisar chat" />
+       <SafeAreaView style={styles.container}>
+        <View style={styles.rowSearch}>
+          <FontAwesome5 name="search" style={styles.icon} />
+          <TextInput placeholder="Pesquisar chat" style={styles.input} />
         </View>
         <FlatList
           data={data}

@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  backgroundimage: {
+    alignItems: "center",
+    width: "100%"
+
+  },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -33,7 +39,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: colors.green,
     padding: 10,
-    width: '75%'
+    width: '90%',
   }
 })
 
