@@ -22,15 +22,18 @@ const styles = StyleSheet.create({
     borderColor: colors.green,
     borderRadius: 5,
   },
+
   icon: {
     fontSize: 24,
     color: colors.green,
     padding: 10
+   
   },
   input: {
     fontSize: 18,
     color: colors.green,
-    padding: 10
+    padding: 10,
+    width: '75%'
   }
 })
 
