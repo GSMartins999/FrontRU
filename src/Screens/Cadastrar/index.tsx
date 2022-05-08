@@ -2,8 +2,8 @@ import React from "react";
 import {
   View,
   Text,
-  TextInput,
   KeyboardAvoidingView,
+  TextInput,
   ImageBackground,
 } from "react-native";
 import { MaterialIcons, Entypo, Ionicons } from "@expo/vector-icons";
@@ -24,27 +24,29 @@ export default function Cadastrar({ navigation }: LoginTypes) {
       <ImageBackground
         source={require("../../assets/fundo.png")}
         style={styles.container}
-      />
+      >
         <KeyboardAvoidingView>
           <Text style={styles.title}>Cadastre-se</Text>
           <View style={styles.formRow}>
-            <Ionicons name="person" style={styles.icon}/>
-            <TextInput style={styles.input} placeholder="Nome" />
+            <Ionicons name="person" style={styles.icon} />
+             <TextInput style={styles.input} placeholder="Nome" placeholderTextColor="#ffffff" />
           </View>
           <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon}/>
+            <MaterialIcons name="email" style={styles.icon} />
             <TextInput
               style={styles.input}
-              placeholder="E-mail"
+              placeholder="Email"
+              placeholderTextColor="#ffffff"
               keyboardType="email-address"
               autoCapitalize="none"
             />
           </View>
           <View style={styles.formRow}>
-            <Entypo name="key" style={styles.icon}/>
+            <Entypo name="key" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="Senha"
+              placeholderTextColor="#ffffff"
               secureTextEntry={true}
               autoCapitalize="none"
             />
@@ -52,6 +54,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
           <Button title="Salvar" type="purple" onPress={handleSignIn} />
           <Button title="Voltar" type="green" onPress={handleLogin} />
         </KeyboardAvoidingView>
+      </ImageBackground>
     </View>
   );
 }

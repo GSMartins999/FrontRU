@@ -28,19 +28,21 @@ export default function Login({ navigation }: LoginTypes) {
         <KeyboardAvoidingView>
           <Text style={styles.title}>Login</Text>
           <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon}/>
-            <TextInput
-              style={styles.input}
-              placeholder="E-mail"
-              keyboardType="email-address"
-              autoCapitalize="none"
-            />
+          <MaterialIcons name="email" style={styles.icon} />
+              <TextInput 
+               style={styles.input}
+               placeholder="E-mail" 
+               placeholderTextColor="#ffffff" 
+               autoCapitalize="none"/>
           </View>
+
+
           <View style={styles.formRow}>
             <Entypo name="key" style={styles.icon}/>
             <TextInput
               style={styles.input}
               placeholder="Senha"
+              placeholderTextColor="#ffffff"
               secureTextEntry={true}
               autoCapitalize="none"
             />

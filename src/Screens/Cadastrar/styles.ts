@@ -7,11 +7,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  backgroundimage: {
+    alignItems: "center",
+    width: "100%"
+
+  },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: colors.purple,
+    color: colors.white,
     marginBottom: 20,
   },
   formRow: {
@@ -19,18 +25,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: colors.purple,
+    borderColor: colors.green,
     borderRadius: 5,
   },
+
   icon: {
     fontSize: 24,
-    color: colors.purple,
+    color: colors.white,
     padding: 10
+   
   },
   input: {
     fontSize: 18,
-    padding: 5,
-    width: "80%"
+    color: colors.white,
+    padding: 10,
+    width: '90%',
   }
 })
 

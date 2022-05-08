@@ -9,20 +9,22 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     width: "100%",
   },
+
   title: {
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    color: colors.black,
+    color: colors.white,
     marginBottom: 20,
+    marginTop: 10
   },
   icon: {
     fontSize: 24,
     padding: 5
   },
   input: {
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 })
 
 export default styles;

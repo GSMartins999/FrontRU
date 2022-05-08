@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native'
+import { color } from 'react-native-reanimated'
+import { withSafeAreaInsets } from 'react-native-safe-area-context'
 import colors from '../../styles/colors'
 
 const styles = StyleSheet.create({
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: colors.green,
+    color: colors.white,
     marginBottom: 20,
   },
   formRow: {
@@ -31,13 +33,13 @@ const styles = StyleSheet.create({
 
   icon: {
     fontSize: 24,
-    color: colors.green,
+    color: colors.white,
     padding: 10
    
   },
   input: {
     fontSize: 18,
-    color: colors.green,
+    color: colors.white,
     padding: 10,
     width: '90%',
   }

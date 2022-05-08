@@ -11,7 +11,7 @@ export default function Button({ onPress, title, type, ...rest }: ButtonProps) {
       style={
         type == "green"
           ? styles.buttonGreen
-          : type == "orange"
+          : type == "purple"
           ? styles.buttonOrange
           : styles.buttonPurple
       }

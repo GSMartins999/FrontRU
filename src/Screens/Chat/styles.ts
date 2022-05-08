@@ -9,16 +9,19 @@ const styles = StyleSheet.create({
   },
   rowSearch: {
     flexDirection: 'row',
-    backgroundColor: colors.black,
-    borderRadius: 10,
+    backgroundColor: colors.white,
+    borderRadius: 25,
     margin: 10,
     alignItems: 'center',
     width: "80%",
     height: 45,
   },
+  input: {
+    width: "80%"
+  },
   icon: {
-    fontSize: 24,
-    padding: 5
+    fontSize: 25,
+    padding: 10
   }
 })
 
