@@ -11,9 +11,9 @@ export default function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveBackgroundColor: colors.secondary,
+        tabBarActiveBackgroundColor: colors.black,
         tabBarActiveTintColor: colors.white,
-        tabBarInactiveBackgroundColor: colors.secondaryLight,
+        tabBarInactiveBackgroundColor: colors.black,
         tabBarInactiveTintColor: colors.white,
       }}
     >
@@ -22,7 +22,7 @@ export default function TabNavigation() {
         component={PerfilScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="person" size={24} color={colors.white} />
+            <Ionicons name="person" size={24} color={colors.green} />
           ),
         }}
       />
@@ -31,7 +31,7 @@ export default function TabNavigation() {
         component={ChatScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="chatbubbles" size={24} color={colors.white} />
+            <Ionicons name="chatbubbles" size={24} color={colors.green} />
           ),
         }}
       />

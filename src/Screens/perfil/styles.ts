@@ -18,10 +18,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10
   },
-  icon: {
-    fontSize: 24,
-    padding: 5
-  },
+  
   input: {
     fontSize: 20,
   },

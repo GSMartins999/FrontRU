@@ -4,14 +4,13 @@ import colors from "../../styles/colors";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 10,
     alignItems: 'center',
   },
   rowSearch: {
     flexDirection: 'row',
     backgroundColor: colors.white,
     borderRadius: 25,
-    margin: 10,
+    marginTop: 50,
     alignItems: 'center',
     width: "80%",
     height: 45,

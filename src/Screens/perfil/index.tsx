@@ -23,7 +23,10 @@ export default function Perfil() {
         type="green"
         onPress={() => console.log("Alterar Senha")}
       />
-      <Button title="Sair" type="green" onPress={() => console.log("Sair")} />
+      <Button 
+        title="Sair" 
+        type="green" 
+        onPress={() => console.log("Sair")} />
     </ImageBackground>
   );
 }
