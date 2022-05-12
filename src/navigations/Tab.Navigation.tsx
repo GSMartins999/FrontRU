@@ -27,7 +27,7 @@ export default function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="Mensagem"
+        name="Avaliações"
         component={ChatScreen}
         options={{
           tabBarIcon: () => (

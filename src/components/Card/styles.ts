@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   topic: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.orange,
     margin: 5,
     borderRadius: 5,
     padding: 5
