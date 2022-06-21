@@ -6,11 +6,10 @@ import React, {
    useEffect,
 
 } from "react";
-import {apiUser} from "../services/data";
-import api from "../services/api";
+import { apiUser } from "../services/data_antigo";
+import api from "../services/data/User";
 import { IAuthState, IAuthContextData } from "../interfaces/User.interface";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { IncomingHttpStatusHeader } from "http2";
 
 const AuthContext = createContext<IAuthContextData>({} as IAuthContextData);
 
@@ -18,7 +17,7 @@ const AuthProvider: React.FC = ({children}) => {
 
    const[auth, setAuth] = useState<IAuthState>({} as IAuthState);
 
-   const sigIn = useCallback(async({email, password}) => {
+   const signIn = useCallback(async({email, password}) => {
       const response = await apiUser.login({
          email,
          password,
@@ -38,7 +37,7 @@ const AuthProvider: React.FC = ({children}) => {
          password,
       });
       const { access_token, user }= response.data.data;
-      api.defailts.headers.common.Authorization = `Bearer ${access_token}`;
+      api.defaults.headers.common.Authorization = `Bearer ${access_token}`;
       setAuth({access_token, user});
 
       await AsyncStorage.setItem("acess_token", access_token);
@@ -57,4 +56,42 @@ const AuthProvider: React.FC = ({children}) => {
       await apiUser.logout();
    }, []);
 
-});
+   const loadUserStorageData = useCallback(async () => {
+      const acess_token = await AsyncStorage.getItem("acess_token");
+      const user = await AsyncStorage.getItem("user");
+   
+   
+    if (acess_token && user) {
+       api.defaults.headers.commom.Authorization = `Bearer ${acess_token}` ;
+       setAuth({ acess_token, user: JSON.parse(user)});   
+      }
+   }, []);
+
+   useEffect(() => {
+      loadUserStorageData();
+   }, []);
+
+   return (
+      <AuthContext.Provider
+      value={{
+         signIn,
+         signOut,
+         register,
+         acess_token: auth?.acess_token,
+         user: auth?.user,
+      }}
+      >
+        {children} 
+      </AuthContext.Provider>
+   );
+
+};
+function useAuth(): IAuthContextData {
+   const context = useContext(AuthContext);
+
+   if(!context) {
+      throw new Error ("useAuth must be used within an AuthProvider");
+   }
+   return context;
+}
+export {AuthProvider, useAuth};

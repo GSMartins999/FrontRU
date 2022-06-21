@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import data from "../../services/data";
+import data from "../../services/data_antigo";
 import Card from "../../components/Card";
 import styles from "./styles";
 
