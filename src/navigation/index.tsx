@@ -5,11 +5,11 @@ import TabNavigation from "./Tab.Navigation";
 import {useAuth} from "../Hook/auth"; 
 
 export default function Navigation() {
-  const {acess_token} = useAuth();
+  const { access_token } = useAuth();
   return (
     <NavigationContainer>
 
-      {acess_token ? <TabNavigation /> : <LoginNavigation/> }
+      {access_token ? <TabNavigation /> : <LoginNavigation/> }
       
     </NavigationContainer>
   );

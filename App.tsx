@@ -1,5 +1,5 @@
 import "react-native-gesture-handler"  
-import Navigation from "./src/navigations";
+import Navigation from "./src/navigation";
 import {AuthProvider} from "./src/Hook/auth";
 
 export default function App() {
