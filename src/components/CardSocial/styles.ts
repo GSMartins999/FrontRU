@@ -3,12 +3,12 @@ import colors from "../../styles/colors";
 
 const styles = StyleSheet.create({
   cardSocial: {
-    backgroundColor: colors.purple,
+    backgroundColor: colors.white,
     borderRadius: 10,
-    margin: 10,
+    margin: 5,
     flexDirection: "row",
     alignItems: "center",
-    width: "90%",
+    width: "50%",
     height: 45,
   }
 })

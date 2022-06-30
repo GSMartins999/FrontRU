@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { ChatScreen, PerfilScreen, MapScreen } from "../Screens";
+import { ChatScreen, PerfilScreen, MapScreen, SairScreen } from "../Screens";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 
@@ -42,6 +42,17 @@ export default function TabNavigation() {
         options={{
           tabBarIcon: () => (
             <Ionicons name="map" size={24} color={colors.green} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Sair"
+        component={SairScreen}
+        options={{
+          drawerLabel: "Sair",
+          tabBarsIcon: () => (
+            <Ionicons name="exit" size={24} color={colors.white} />
           ),
         }}
       />

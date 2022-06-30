@@ -18,6 +18,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10
   },
+
+  link: {
+    fontSize: 20,
+    },
+    img: {
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+    },
   
   input: {
     fontSize: 20,
