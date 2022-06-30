@@ -13,35 +13,37 @@ export default function Perfil() {
       style={styles.container}
     >
       <Image source={require("../../assets/leonardo.png")} ></Image>
-      <Text style={styles.title}> Seja bem vindo, Leonardo!</Text>
-      <CardSocial>
-        <>
-          <FontAwesome5 name="facebook" style={styles.icon} />
-          <Text style={styles.link}>https://facebook.com</Text>
-        </>
-      </CardSocial>
-      <CardSocial>
-        <>
-          <FontAwesome5 name="instagram" style={styles.icon} />
-          <Text style={styles.link}>https://instagram.com</Text>
-        </>
-      </CardSocial>
-      <CardSocial>
-        <>
-          <FontAwesome5 name="linkedin" style={styles.icon} />
-          <Text style={styles.link}>https://linkedin.com</Text>
-        </>
-      </CardSocial>
+      <Text style={styles.title}> Bem vindo, Leonardo!</Text>
+      
       <Button
         title="Salvar"
-        type="green"
+        type="purple"
         onPress={() => console.log("Salvar")}
       />
       <Button
         title="Alterar Senha"
-        type="green"
+        type="purple"
         onPress={() => console.log("Alterar Senha")}
       />
+
+      <CardSocial>
+        <>
+          <FontAwesome5 name="facebook" style={styles.icon} /> 
+        </>
+      </CardSocial>
+
+      <CardSocial>
+        <>
+          <FontAwesome5 name="instagram" style={styles.icon} />
+
+        </>
+      </CardSocial>
+
+      <CardSocial>
+        <>
+          <FontAwesome5 name="linkedin" style={styles.icon} />    
+        </>
+      </CardSocial>
     </ImageBackground>
   );
 }

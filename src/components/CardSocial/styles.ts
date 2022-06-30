@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     margin: 5,
     flexDirection: "row",
     alignItems: "center",
-    width: "50%",
+    width: "60%",
     height: 45,
   }
 })

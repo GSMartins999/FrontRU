@@ -19,17 +19,13 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
 
-  link: {
-    fontSize: 20,
-    },
-    img: {
-    width: 80,
-    height: 80,
-    borderRadius: 50,
-    },
-  
+  icon:{
+    fontSize: 20
+  },
+ 
   input: {
-    fontSize: 20,
+    fontSize: 20
+,
   },
 })
 

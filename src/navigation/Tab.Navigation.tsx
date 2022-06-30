@@ -22,7 +22,7 @@ export default function TabNavigation() {
         component={PerfilScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="person" size={24} color={colors.green} />
+            <Ionicons name="person" size={24} color={colors.white} />
           ),
         }}
       />
@@ -31,7 +31,7 @@ export default function TabNavigation() {
         component={ChatScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="chatbubbles" size={24} color={colors.green} />
+            <Ionicons name="chatbubbles" size={24} color={colors.white} />
           ),
         }}
       />
@@ -41,7 +41,7 @@ export default function TabNavigation() {
         component={MapScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="map" size={24} color={colors.green} />
+            <Ionicons name="map" size={24} color={colors.white} />
           ),
         }}
       />
@@ -51,7 +51,7 @@ export default function TabNavigation() {
         component={SairScreen}
         options={{
           drawerLabel: "Sair",
-          tabBarsIcon: () => (
+          tabBarIcon: () => (
             <Ionicons name="exit" size={24} color={colors.white} />
           ),
         }}
