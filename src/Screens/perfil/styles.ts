@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { initialWindowMetrics } from 'react-native-safe-area-context';
 import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
@@ -20,12 +21,12 @@ const styles = StyleSheet.create({
   },
 
   icon:{
-    fontSize: 20
+    fontSize: 50,
+    
   },
  
   input: {
-    fontSize: 20
-,
+    fontSize: 20,
   },
 })
 

@@ -26,24 +26,15 @@ export default function Perfil() {
         onPress={() => console.log("Alterar Senha")}
       />
 
-      <CardSocial>
-        <>
+      
           <FontAwesome5 name="facebook" style={styles.icon} /> 
-        </>
-      </CardSocial>
+     
 
-      <CardSocial>
-        <>
           <FontAwesome5 name="instagram" style={styles.icon} />
 
-        </>
-      </CardSocial>
-
-      <CardSocial>
-        <>
+      
           <FontAwesome5 name="linkedin" style={styles.icon} />    
-        </>
-      </CardSocial>
+     
     </ImageBackground>
   );
 }
