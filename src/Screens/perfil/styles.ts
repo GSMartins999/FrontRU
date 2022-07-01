@@ -1,14 +1,18 @@
 import { StyleSheet } from 'react-native';
-import { initialWindowMetrics } from 'react-native-safe-area-context';
 import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
+  
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     resizeMode: "cover",
     width: "100%",
+  },
+
+  image: {
+    padding: 5
   },
 
   title: {
@@ -19,6 +23,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: 10
   },
+  
+  img: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    },
 
   icon:{
     fontSize: 50,

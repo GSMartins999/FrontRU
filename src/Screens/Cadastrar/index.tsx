@@ -55,7 +55,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
     }, 500);
   }, []);
 
-  return (
+  return(
     <>
       {isLoading ? (
         <Loading />

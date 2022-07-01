@@ -1,4 +1,4 @@
-import api from "../api";
+import api from "../../api";
 import { IRegister, IAuthenticate, IUser } from "../../../interfaces/User.interface"
 class UserData {
     register(data: IRegister) {

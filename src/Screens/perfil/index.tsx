@@ -1,19 +1,21 @@
 import React from "react";
-import { Text, ImageBackground, Image, } from "react-native";
+import { Text, ImageBackground, Image, View } from "react-native";
 import styles from "./styles";
 import Button from "../../components/Button";
-import CardSocial from "../../components/CardSocial";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { user } from "../../Hook/auth";
 
-export default function Perfil() {
+export default function Perfil() {  
 
   return (
     <ImageBackground
       source={require("../../assets/fundo.png")}
       style={styles.container}
     >
-      <Image source={require("../../assets/leonardo.png")} ></Image>
-      <Text style={styles.title}> Bem vindo, Leonardo!</Text>
+     <View style={styles.image}>
+        <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
+        <Text style={styles.title}>{user?.name}</Text>
+      </View>
       
       <Button
         title="Salvar"
