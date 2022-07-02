@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import colors from '../../styles/colors';
 
 const styles = StyleSheet.create({
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 40,
     },
-
+    
   icon:{
     fontSize: 50,
     
