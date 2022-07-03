@@ -19,9 +19,9 @@ export default function Perfil() {
 
 
       <Button
-        title="Salvar"
+        title="Editar Perfil"
         type="purple"
-        onPress={() => console.log("Salvar")}
+        onPress={() => console.log("Editar Perfil")}
       />
       <Button
         title="Alterar Senha"
