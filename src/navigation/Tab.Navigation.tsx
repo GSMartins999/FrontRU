@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { ChatScreen, PerfilScreen, MapScreen, CameraScreen, QrCodeScreen, SairScreen } from "../Screens";
+import { ChatScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, SairScreen } from "../Screens";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 
@@ -47,19 +47,32 @@ export default function TabNavigation() {
       />
 
 
-        <Tab.Screen
-                name="Camera"
-                component={CameraScreen}
-                options={{
-                  tabBarIcon: () => (
-                    <Ionicons
-                    name="camera"
-                    size={24}
-                    color={colors.white} 
-                    />
-                  ),
-                }}
-              />
+      <Tab.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons
+              name="camera"
+              size={24}
+              color={colors.white}
+            />
+          ),
+        }}
+      />
+
+
+
+      <Tab.Screen
+        name="Arquivo"
+        component={ArquivoScreen}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name="file-tray-outline"
+              size={24} color={colors.white} />
+          ),
+        }}
+      />
 
       <Tab.Screen
         name="QrCode"
@@ -67,9 +80,9 @@ export default function TabNavigation() {
         options={{
           tabBarIcon: () => (
             <Ionicons
-             name="qr-code-outline"
-             size={24}
-             color={colors.white} 
+              name="qr-code-outline"
+              size={24}
+              color={colors.white}
             />
           ),
         }}
@@ -80,10 +93,10 @@ export default function TabNavigation() {
         component={SairScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons 
-            name="exit" 
-            size={24} 
-            color={colors.white}
+            <Ionicons
+              name="exit"
+              size={24}
+              color={colors.white}
             />
           ),
         }}
