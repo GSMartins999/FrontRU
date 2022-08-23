@@ -48,15 +48,12 @@ export default function TabNavigation() {
 
 
       <Tab.Screen
-        name="Camera"
-        component={CameraScreen}
+        name="QrCode"
+        component={QrCodeScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons
-              name="camera"
-              size={24}
-              color={colors.white}
-            />
+            <Ionicons name="qr-code-outline"
+              size={24} color={colors.white} />
           ),
         }}
       />

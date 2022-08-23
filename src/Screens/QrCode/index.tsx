@@ -1,52 +1,49 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { ImageBackground, Text, View } from "react-native";
-import { BarCodeScanner, BarCodeScannerResult } from "expo-barcode-scanner";
+import {BarCodeScanner, BarCodeScannerResult} from "expo-barcode-scanner";
 
 import styles from "./styles";
-import Button from "../../components/Button";
-
+import  Button from "../../components/Button";
 
 const QrCode = () => {
-    const [hasPermission, setHasPermission] = useState<boolean | null>(null);
-    const [scanned, setScanned] = useState<boolean>(false);
-
+    const [hasPermission, setHasPermission] = useState<boolean | null> (null);
+    const [scanned, setScanned] = useState <boolean>(false);
 
     useEffect(() => {
         (async () => {
-            const { status } = await BarCodeScanner.requestPermissionsAsync();
+            const {status} = await BarCodeScanner.requestPermissionsAsync();
             setHasPermission(status === "granted");
+        }) ();
+    }, []);
 
-        })();
-    },[]);
-
-    const handleBarCodeScanned = ({ type, data }: BarCodeScannerResult) => {
+    const handleBarCodeScanned = ({ type, data}: BarCodeScannerResult ) =>{
         setScanned(true);
-        alert( data);
+        alert(data);
     };
 
-    if (hasPermission === null) {
-        return <Text> Requesting for camera permission</Text>;
+    if(hasPermission === null){
+        return <Text> Requesting for camera permission </Text>;
     }
-    if (hasPermission === false) {
-        return <Text> No acess to camera</Text>;
+    if(hasPermission === false){
+        return <Text> no acess to camera </Text>;
     }
 
-    return (
+    return(
         <ImageBackground
-        source={require("../../assets/fundo.png")}
-        style={styles.container}
+            source={require("../../assets/fundo.png")}
+            style = {styles.container}
         >
             <View style={styles.centraliza}>
                 <BarCodeScanner
-                onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-                style={styles.scanner}
+                    onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                    style={styles.scanner}
                 />
             </View>
             {scanned && (
-                <Button
-                type="third"
-                title="Pressione para escanear novamente"
-                onPress={() => setScanned(false)}
+                <Button 
+                    type="orange"
+                    title="pressione para escanear novamente"
+                    onPress={() => setScanned(false)}
                 />
             )}
         </ImageBackground>
