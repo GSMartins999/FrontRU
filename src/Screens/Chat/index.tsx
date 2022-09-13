@@ -8,11 +8,12 @@ import {
   TouchableOpacity,
   Text,
 } from "react-native";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { Card , Loading } from "../../components";
+import { Ionicons } from "@expo/vector-icons";
+import Card from "../../components/Card";
+import Loading from "../../components/Loading"
 import {ChatTypes } from "../../types/Screen.types";
 import { apiMensagem } from "../../services/data";
-import { IMensagemState, IMensageState } from "../../interfaces/Mensagem.interface";
+import { IMensageState } from "../../interfaces/Mensagem.interface";
 import styles from "./styles";
 
 export default function Chat({navigation}: ChatTypes) {
@@ -25,23 +26,40 @@ export default function Chat({navigation}: ChatTypes) {
   useEffect(() => {
     async function loadMensagem() {
       const response = await apiMensagem.index();
-      //parei aqui
+      setMensagem(response.data.data);
+      setIsLoading(false);
     }
-  }
+    navigation.addListener("focus", () => loadMensagem());
+  }, []);
+
+  const renderItem = ({ item }) => <Card data={item} />;
+
   return (
-    <ImageBackground source={require("../../assets/fundo.png")}
-      style={styles.container}>
-       <SafeAreaView style={styles.container}>
-        <View style={styles.rowSearch}>
-          <FontAwesome5 name="search" style={styles.icon} />
-          <TextInput placeholder="Pesquisar chat" style={styles.input} />
-        </View>
-        <FlatList
-          data={data}
-          renderItem={renderItem}
-          keyExtractor={(item) => String(item.id)}
-        />
-      </SafeAreaView>
-    </ImageBackground>
+     <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <ImageBackground source={require("../../assets/fundo.png")}
+          style={styles.container}
+        >
+          <SafeAreaView style={styles.container}>
+            <View style={styles.rowSearch}>
+              <Ionicons name="search" styles={styles.icon} />
+              <TextInput placeholder="Pesquisar Chat" />
+            </View>
+            {mensagem.length > 0 && (
+              <FlatList
+                data={mensagem}
+                renderItem={renderItem}
+                keyExtractor={(item) => String(item.id)}
+              />
+            )}
+            <TouchableOpacity style={styles.button} onPress={handleChat}>
+              <Text style={styles.buttonText}> + </Text>
+            </TouchableOpacity>
+          </SafeAreaView>
+        </ImageBackground>
+      )}
+    </>
   );
 }

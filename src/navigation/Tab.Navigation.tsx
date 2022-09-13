@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ChatScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, SairScreen } from "../Screens";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
+import ChatNavigation from "./chat.navigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,16 @@ export default function TabNavigation() {
         name="Avaliações"
         component={ChatScreen}
         options={{
+          tabBarIcon: () => (
+            <Ionicons name="chatbubbles" size={24} color={colors.white} />
+          ),
+        }}
+      />
+       <Tab.Screen
+        name="Chat"
+        component={ChatNavigation}
+        options={{
+          title: "Chat",
           tabBarIcon: () => (
             <Ionicons name="chatbubbles" size={24} color={colors.white} />
           ),
