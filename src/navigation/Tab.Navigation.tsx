@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { ChatScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, SairScreen } from "../Screens";
+import { ChatScreen, VideoAudioScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, SairScreen } from "../Screens";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 import ChatNavigation from "./chat.navigation";
@@ -69,14 +69,12 @@ export default function TabNavigation() {
         }}
       />
 
-
-
       <Tab.Screen
-        name="Arquivo"
-        component={ArquivoScreen}
+        name="AudioVideo"
+        component={VideoAudioScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="file-tray-outline"
+            <Ionicons name="play"
               size={24} color={colors.white} />
           ),
         }}
@@ -95,6 +93,7 @@ export default function TabNavigation() {
           ),
         }}
       />
+        
 
       <Tab.Screen
         name="Sair"
@@ -109,6 +108,7 @@ export default function TabNavigation() {
           ),
         }}
       />
+
     </Tab.Navigator>
   );
 }
