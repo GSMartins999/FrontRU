@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, View } from "react-native";
-//import { CardProps } from "../../interfaces/Card.interface";
 import styles from "./styles";
 import { IMensagem } from "../../interfaces/Mensagem.interface";
 import { format } from "date-fns";
@@ -15,14 +14,7 @@ export default function Card({ data }: IMensagem) {
       <View>
         <Text>Título: {data.titulo}</Text>
         <Text>Mensagem: {data.mensagem}</Text>
-        <Image source={{ uri: data.imagem}} style={styles.img}> </Image>
-        <View style={styles.topicos}>
-          {data.topico.map((i) => (
-            <View key={i.id} style={styles.topic}>
-              <Text>{i.topicos}</Text>
-            </View>
-          ))}
-        </View>
+       
       </View>
     </View>
   );

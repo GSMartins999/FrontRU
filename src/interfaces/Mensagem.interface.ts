@@ -2,7 +2,7 @@ export interface IMensagem {
     titulo?: string,
     mensagem?: string,
     topico?: number [],
-    imagem?: {
+    image?: {
         uri?: string
         base64?: string | any
         }

@@ -17,7 +17,7 @@ import { IMensageState } from "../../interfaces/Mensagem.interface";
 import styles from "./styles";
 
 export default function Chat({navigation}: ChatTypes) {
-  const [isLoading, setIsloading] = useState (true);
+  const [isLoading, setIsLoading] = useState(true);
   const [mensagem, setMensagem] = useState<IMensageState[]>([]);
   function handleChat(){
     navigation.navigate("EnviarMensagem");

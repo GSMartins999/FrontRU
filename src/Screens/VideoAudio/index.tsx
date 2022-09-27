@@ -54,6 +54,7 @@ export default function App() {
           setRecording(undefined);
           await recording.stopAndUnloadAsync();
           const uri = recording.getURI(); 
+          setSoundUri(uri)
           console.log('Recording stopped and stored at', uri);
         }
 
