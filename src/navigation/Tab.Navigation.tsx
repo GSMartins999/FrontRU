@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { VideoAudioScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, SairScreen } from "../Screens";
+import { VideoAudioScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, QrCodeScreen, AcelerometroScreen, SairScreen } from "../Screens";
 import { Ionicons } from "@expo/vector-icons";
 import colors from "../styles/colors";
 import ChatNavigation from "./chat.navigation";
@@ -27,8 +27,8 @@ export default function TabNavigation() {
           ),
         }}
       />
-  
-       <Tab.Screen
+
+      <Tab.Screen
         name="Chat"
         component={ChatNavigation}
         options={{
@@ -85,7 +85,18 @@ export default function TabNavigation() {
           ),
         }}
       />
-        
+
+<Tab.Screen
+        name="acelerometro"
+        component={AcelerometroScreen}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name="car" 
+            size={24} color={colors.white} />
+          ),
+        }}
+      />
+
 
       <Tab.Screen
         name="Sair"
