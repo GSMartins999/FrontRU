@@ -1,9 +1,10 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { VideoAudioScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, PedometroScreen, QrCodeScreen, AcelerometroScreen, SairScreen } from "../Screens";
+import { VideoAudioScreen, PerfilScreen, MapScreen, CameraScreen, ArquivoScreen, PedometroScreen, GyroscopioScreen, QrCodeScreen, AcelerometroScreen, SairScreen, MagnetoScreen } from "../Screens";
 import { Ionicons, Foundation } from "@expo/vector-icons";
 import colors from "../styles/colors";
 import ChatNavigation from "./chat.navigation";
+import Magneto from "../Screens/Magneto";
 
 const Tab = createBottomTabNavigator();
 
@@ -86,7 +87,36 @@ export default function TabNavigation() {
         }}
       />
 
-<Tab.Screen
+
+      <Tab.Screen
+        name="Magneto"
+        component={MagnetoScreen}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons
+              name="magnet"
+              size={24}
+              color={colors.white}
+            />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Gyroscopio"
+        component={GyroscopioScreen}
+        options={{
+          tabBarIcon: () => (
+            <Ionicons
+              name="nuclear"
+              size={24}
+              color={colors.white}
+            />
+          ),
+        }}
+      />
+
+      <Tab.Screen
         name="Pedometro"
         component={PedometroScreen}
         options={{
@@ -98,13 +128,13 @@ export default function TabNavigation() {
       />
 
 
-<Tab.Screen
+      <Tab.Screen
         name="acelerometro"
         component={AcelerometroScreen}
         options={{
           tabBarIcon: () => (
-            <Ionicons name="car" 
-            size={24} color={colors.white} />
+            <Ionicons name="car"
+              size={24} color={colors.white} />
           ),
         }}
       />

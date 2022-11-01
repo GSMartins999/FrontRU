@@ -22,6 +22,7 @@ import { IMensagem } from "../../interfaces/Mensagem.interface";
 import * as ImagePicker from "expo-image-picker";
 import Loading from "../../components/Loading";
 import colors from "../../styles/colors";
+import MultiSelect from "react-native-multiple-select";
 import Button from "../../components/Button";
 
 export default function EnviarMensagem({ navigation }: ChatTypes) {
@@ -140,10 +141,10 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                                 selectText="Selecione os topicos"
                                 onSelectedItemsChange={(i) => setSelectedTopico(i)}
                                 selectedItems={selectedTopico}
-                                selectedItemTextColor={colors.green}
-                                tagBorderColor={colors.green}
-                                tagTextColor={colors.green}
-                                submitButtonColor={colors.green}
+                                selectedItemTextColor={colors.cinza}
+                                tagBorderColor={colors.cinza}
+                                tagTextColor={colors.cinza}
+                                submitButtonColor={colors.cinza}
                                 styleDropdownMenu={styles.selectTopico}
                                 styleInputGroup={styles.selectTopico}
                             />
@@ -167,12 +168,12 @@ export default function EnviarMensagem({ navigation }: ChatTypes) {
                         </View>
                         <Button
                             title="Salvar"
-                            type="green"
+                            type="cinza"
                             onPress={handleSubmit}
                         />
                         <Button
                             title="Voltar"
-                            type="chatbotao"
+                            type="postbotao"
                             onPress={handleVoltar}
                         />
                     </KeyboardAvoidingView>
