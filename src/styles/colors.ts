@@ -5,5 +5,7 @@ export default {
   greensLight: "#CFD8DC",  
   purple: '#7E57C2',
   orange: '#FFB74D',
-  orangeLight: '#FFE9CA'
+  orangeLight: '#FFE9CA',
+  fundo: "#0F356D",
+  inputFundo: "#CDBBAC"
 }

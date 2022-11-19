@@ -4,8 +4,8 @@ import {
   Text,
   TextInput,
   KeyboardAvoidingView,
-  ImageBackground,
   Alert,
+  Image,
 } from "react-native";
 import { MaterialIcons, Entypo, Ionicons } from "@expo/vector-icons";
 import Loading from "../../components/Loading";
@@ -21,9 +21,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
   const { register } = useAuth();
   const [data, setData] = useState<IRegister>();
   const [isLoading, setIsLoading] = useState(true);
-  function handleLogin() {
-    navigation.navigate("Login");
-  }
+
   function handleChange(item: IRegister) {
     setData({ ...data, ...item });
   }
@@ -55,56 +53,54 @@ export default function Cadastrar({ navigation }: LoginTypes) {
     }, 500);
   }, []);
 
-  return(
+  return (
     <>
       {isLoading ? (
         <Loading />
       ) : (
+        <View style={styles.container}>
           <View style={styles.container}>
-            <ImageBackground
-              source={require("../../assets/fundo.png")}
-              style={styles.container}
-            >
-              <KeyboardAvoidingView>
-                <Text style={styles.title}>Cadastre-se</Text>
-                <View style={styles.formRow}>
-                  <Ionicons name="person" style={styles.icon} />
-                  <TextInput
-                    style={styles.input}
-                    placeholder="Nome"
-                    onChangeText={(i) => handleChange({ name: i })}
-                  />
-                </View>
-                <View style={styles.formRow}>
-                  <MaterialIcons name="email" style={styles.icon} />
-                  <TextInput
-                    style={styles.input}
-                    placeholder="E-mail"
-                    keyboardType="email-address"
-                    autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ email: i })}
-                  />
-                </View>
-                <View style={styles.formRow}>
-                  <Entypo name="key" style={styles.icon} />
-                  <TextInput
-                    style={styles.input}
-                    placeholder="Senha"
-                    secureTextEntry={true}
-                    autoCapitalize="none"
-                    onChangeText={(i) => handleChange({ password: i })}
-                  />
-                </View>
-                <Button
-                  title="Salvar"
-                  type="purple"
-                  onPress={handleRegister}
+            <Image
+              style={styles.img}
+              source={require("../../assets/cefetLogo.png")}
+            />
+            <KeyboardAvoidingView>
+              <Text style={styles.title}>
+                Para se cadastrar, insira os dados abaixo!
+              </Text>
+              <View style={styles.formRow}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Matricula: "
+                  placeholderTextColor="#FFF"
+                  onChangeText={(i) => handleChange({ name: i })}
                 />
-                <Button title="Voltar" type="green" onPress={handleLogin} />
-              </KeyboardAvoidingView>
-            </ImageBackground>
+              </View>
+              <View style={styles.formRow}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="email:"
+                  placeholderTextColor="#FFF"
+                  keyboardType="email-address"
+                  autoCapitalize="none"
+                  onChangeText={(i) => handleChange({ email: i })}
+                />
+              </View>
+              <View style={styles.formRow}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Senha"
+                  placeholderTextColor="#FFF"
+                  secureTextEntry={true}
+                  autoCapitalize="none"
+                  onChangeText={(i) => handleChange({ password: i })}
+                />
+              </View>
+              <Button title="Salvar" type="purple" onPress={handleRegister} />
+            </KeyboardAvoidingView>
           </View>
-        )}
+        </View>
+      )}
     </>
   );
 }

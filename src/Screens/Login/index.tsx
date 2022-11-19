@@ -4,7 +4,7 @@ import {
   Text,
   TextInput,
   KeyboardAvoidingView,
-  ImageBackground,
+  Image,
   Alert,
 } from "react-native";
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
@@ -52,17 +52,16 @@ export default function Login({ navigation }: LoginTypes) {
     setIsLoading(false);
   }, []);
 
-
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={require("../../assets/fundo.png")}
-        style={styles.container}
-      >
+      <View style={styles.container}>
+        <Image
+          style={styles.img}
+          source={require("../../assets/cefetLogo.png")}
+        />
+        <Text style={styles.title}> Olá, seja bem vindo! </Text>
         <KeyboardAvoidingView>
-          <Text style={styles.title}>Login</Text>
           <View style={styles.formRow}>
-            <MaterialIcons name="email" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="E-mail"
@@ -72,7 +71,6 @@ export default function Login({ navigation }: LoginTypes) {
             />
           </View>
           <View style={styles.formRow}>
-            <Entypo name="key" style={styles.icon} />
             <TextInput
               style={styles.input}
               placeholder="Senha"
@@ -81,14 +79,10 @@ export default function Login({ navigation }: LoginTypes) {
               onChangeText={(i) => handleChange({ password: i })}
             />
           </View>
-          <Button title="Login" type="green" onPress={handleSignIn} />
-          <Button
-            title="Cadastre-se"
-            type="purple"
-            onPress={handleCadastrar}
-          />
+          <Button title="Entrar" type="purple" onPress={handleSignIn} />
+          <Button title="Cadastre-se" type="purple" onPress={handleCadastrar} />
         </KeyboardAvoidingView>
-      </ImageBackground>
+      </View>
     </View>
   );
 }

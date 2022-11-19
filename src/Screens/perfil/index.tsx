@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text, ImageBackground, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import styles from "./styles";
 import Button from "../../components/Button";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -32,15 +32,12 @@ export default function Perfil() {
 
   return (
 
-    <ImageBackground 
-      source={require("../../assets/fundo.png")}
-      style={styles.container}
-    >
-      <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
-      <Text style={styles.title}>{user?.name}</Text>
 
 
-      <Button
+<View style={styles.container}>
+  <Image source={{ uri: user?.profile_photo_url }} style={styles.img} />
+   <Text style={styles.title}>{user?.name}</Text>
+   <Button
         title="Editar Perfil"
         type="purple"
         onPress={() => console.log("Editar Perfil")}
@@ -51,12 +48,9 @@ export default function Perfil() {
         onPress={() => console.log("Alterar Senha")}
       />
 
-      <FontAwesome5 name="facebook" style={styles.icon} />
+</View>
 
-      <FontAwesome5 name="instagram" style={styles.icon} />
 
-      <FontAwesome5 name="linkedin" style={styles.icon} />
 
-    </ImageBackground>
   );
 }

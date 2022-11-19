@@ -6,40 +6,44 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: colors.fundo
   },
-
-  backgroundimage: {
-    alignItems: "center",
-    width: "100%"
-
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: colors.white,
-    marginBottom: 20,
+    title: {
+        fontSize: 30,
+        fontWeight: "bold",
+        textAlign: "center",
+        color: colors.white,
+        marginBottom: 20,
   },
   formRow: {
     margin: 10,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: colors.green,
-    borderRadius: 5,
-  },
+    borderColor: colors.black,
+    borderRadius: 15,
+    backgroundColor: colors.inputFundo,
 
+  },
+  img:{
+    height: 150,
+    width: 150,
+  },
   icon: {
-    fontSize: 24,
+    fontSize: 20,
     color: colors.white,
     padding: 10
-   
   },
   input: {
     fontSize: 18,
     color: colors.white,
     padding: 10,
-    width: '90%',
+    width: "80%"
+  },
+  text:{
+    alignItems: 'center',
+    fontSize: 13,
+    color: colors.white,
   }
 })
 
