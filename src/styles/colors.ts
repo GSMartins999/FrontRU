@@ -7,5 +7,7 @@ export default {
   orange: '#FFB74D',
   orangeLight: '#FFE9CA',
   fundo: "#0F356D",
-  inputFundo: "#CDBBAC"
+  inputFundo: "#CDBBAC",
+  AgendB: "#c40233",
+
 }

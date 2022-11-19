@@ -79,8 +79,8 @@ export default function Login({ navigation }: LoginTypes) {
               onChangeText={(i) => handleChange({ password: i })}
             />
           </View>
-          <Button title="Entrar" type="purple" onPress={handleSignIn} />
-          <Button title="Cadastre-se" type="purple" onPress={handleCadastrar} />
+          <Button title="Entrar" type="orange" onPress={handleSignIn} />
+          <Button title="Cadastre-se" type="orange" onPress={handleCadastrar} />
         </KeyboardAvoidingView>
       </View>
     </View>

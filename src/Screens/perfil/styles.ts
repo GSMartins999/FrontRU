@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     resizeMode: "cover",
     width: "100%",
-    backgroundColor: colors.orangeLight
+    backgroundColor: colors.fundo
 
   },
 

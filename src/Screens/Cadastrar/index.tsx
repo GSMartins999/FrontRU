@@ -96,7 +96,7 @@ export default function Cadastrar({ navigation }: LoginTypes) {
                   onChangeText={(i) => handleChange({ password: i })}
                 />
               </View>
-              <Button title="Salvar" type="purple" onPress={handleRegister} />
+              <Button title="Salvar" type="orange" onPress={handleRegister} />
             </KeyboardAvoidingView>
           </View>
         </View>
